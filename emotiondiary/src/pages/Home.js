@@ -24,15 +24,14 @@ const Home = () => {
       0
     ).getTime();
 
-    console.log(new Date(curDate.getFullYear(), curDate.getMonth(), 0));
     setData(
       diaryList.filter((it) => firstDay <= it.date && it.date <= lastDay)
     );
   }, [diaryList, curDate]);
 
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
+  // useEffect(() => {
+  //   console.log(data);
+  // }, [data]);
 
   const increaseMonth = () => {
     setCurDate(
